@@ -1166,6 +1166,7 @@ form label:not(.last) input:focus-visible + hr{
     
     .pros-div{
         gap: 2%;
+        width: auto;
     }
     .pros-dit{
         width: 360px;
