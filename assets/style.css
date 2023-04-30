@@ -1,0 +1,578 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    cursor:context-menu;
+    outline: none;
+    font-family:poppins;
+}
+body{
+    overflow-x: hidden;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    width: 1000px;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 100px;
+    height:max-content;
+}
+.nav{
+    width: 100%;
+    height: 100px;
+    padding: calc(20px + 2vw);
+    justify-content: right;
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+}
+.nav-connect{
+    width: 130px;
+    height: 40px;
+    background-color: blue;
+    border: none;
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 14px;
+}
+.back{
+    background-image: url("https://wallpaperaccess.com/full/5432092.jpg");
+    background-color: rgb(15, 15, 77);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 100vw;
+    height:680px;
+    top: 0;
+    z-index: -2;
+    object-fit: cover;
+}
+.overly{
+    position: absolute;
+    width: 100vw;
+    height:680px;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+    background-color:rgba(0, 0, 0, 0.267);
+    backdrop-filter: blur(1px);
+}
+.head{
+/* background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS84HzrDnHVf05gSPN1jWcosCpIdppCdgGjyOTv4qSdxPCtIO2nia7gGT5ZWt_DBsk8ch0&usqp=CAU"); */
+   background-repeat: no-repeat;
+   background-size: contain;
+   width: 100%;
+   height: 680px;
+   padding: 300px 40px;
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   z-index: 10;
+   text-align: center;
+   justify-content: space-around;
+   align-items: center;
+}
+.head h1{
+    margin-top: 6vw;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 800;
+}
+.head .connect{
+    cursor: pointer;
+    background-color: #fff;
+    color: blue;
+}
+.head p{
+    margin-top: 2vw;
+    font-weight: 400;
+    font-size: 14px;
+    width: 60%;
+    color: rgb(244, 244, 247);
+}
+  * svg{
+    position: absolute;
+    right: 0;
+    top: 200px;
+    width: 35vw;
+    height:auto;
+    z-index: -1;
+}
+
+.step{
+    width: 100%;
+    justify-content: space-around;
+}
+.steps{
+    width: 280px;
+    height: 340px;
+    padding: 40px;
+    border-radius: 10px;
+}
+.steps .write{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.steps:nth-child(even){
+    background-color: blue;
+    color: #fff;
+}
+.steps:nth-child(odd){
+    background-color: #f4f4f4;
+}
+.steps .write h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+.connect{
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: blue;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    margin-top: 100px;
+}
+.other-action{
+    margin-top: 100px;
+    width: 80%;
+    row-gap: 40px;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.action{
+    align-self: center;
+    justify-self: center;
+    width: 80%;
+    
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 220px;
+    border-radius:5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 10px rgb(249, 249, 253);
+}
+.action h1{
+    font-size: 1;
+}
+.action button{
+    width: 110px;
+    background-color: blue;
+    height: 40px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 40px;
+}
+.nav-2{
+    justify-content: space-around;
+}
+.nav-2 h1{
+    font-size: 30px;
+    color: blue;
+}
+.nav-2 input{
+    width: 190px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    padding: 10px;
+    border: 1px solid rgb(211, 211, 245);
+    cursor:auto;
+}
+.sub{
+    justify-self: left;
+    align-self: flex-start;
+    margin-top: 130px;
+    margin-left: calc(20px + 5vw);
+    font-size: 14px;
+    color: rgb(136, 136, 184);
+    text-transform: capitalize;
+}
+.set-wallet{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 80%;
+    row-gap: 40px;
+    column-gap: 40px;
+    margin-top: 50px;
+}
+.wallet{
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    padding: 20px;
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px 3px rgb(241, 241, 247);
+}
+.wallet img{
+    width: 50%;
+    height: auto;
+    pointer-events: none;
+    cursor: pointer;
+}
+.wallet h2{
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+.pop-up{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0%);
+}
+.pop-up-out{
+    transform: scale(100%);
+}
+.cover{
+background-color: rgba(0, 0, 0,.6);
+width: 100vw;
+height: 100vh;
+position: absolute;
+z-index: -1;
+cursor: pointer;
+}
+.info{
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+}
+.info button{
+    width: 150px;
+    background-color: blue;
+    height: 50px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.info h1{
+    font-size: 20px;
+
+}
+.info p{
+    font-size: 14px;
+    text-align: center;
+}
+.loder{
+    width: 60px;
+    height: 60px;
+    border-radius: 1000px;
+    border: 5px solid rgb(237, 237, 240);
+    border-right-color: blue;
+    animation: spin 1s ease-in forwards infinite;
+}
+@keyframes spin {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.see{
+    display: flex;
+}
+.form{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont{
+    width: 500px;
+    height: 450px;
+    box-shadow: 5px 5px 10px 5px #fafbff;
+    position: relative;
+    padding-top: 10px;
+}
+.label{
+    display: flex;
+    height: 40px;
+    justify-content: space-around;
+}
+
+.hide{
+    display: none;
+}
+.label  div{
+    width: 30%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.active-div{
+    border-radius: 10px;
+    border: 1px solid blue;
+    color: blue;
+}
+.cont1,
+.cont2,
+.cont3{
+    width: 100%;
+    height: 400px;
+    position: absolute;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-around;
+}
+.dis{
+    display: flex;
+}
+.icon{
+    width: 30%;
+    height: auto;
+    align-self: center;
+}
+
+ footer{
+    margin-top: 3vw;
+    font-size: calc(6px + 1vw);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    color: #b6b4b4;
+ }
+ footer div{
+    display: flex;
+    gap: calc(5px + 1vw);
+    justify-content: space-between;
+    color: #b6b4b4;
+ }
+ footer div a{
+    text-decoration: none;
+    color: #b6b4b4;
+    cursor: pointer;
+ }
+
+
+.cont2 h1,
+.cont1 h1{
+    font-size: 25px;
+    text-transform: capitalize;
+}
+.cont2 p,
+.cont3 p,
+.cont1 p{
+    font-size: 14px;
+    opacity: .3;
+}
+.cont2 textarea,
+.cont1 textarea{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #f4f4f4;
+    cursor: auto;
+}
+.cont2 input,
+.cont3 input,
+.cont1 input{
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    border: 1px solid #f4f4f4;
+    cursor: auto;
+}
+.but{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.but button{
+    width: 180px;
+    height: 40px;
+    border:1px solid #f4f4f4;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+.but .btn{
+    background-color: blue;
+    color: #fff;
+    border: none;
+}
+.loadin{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.loadin div{
+    width: 20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 2000px;
+}
+.loadin div:nth-child(1){
+    animation: first 1s ease infinite;
+}
+.loadin div:nth-child(2){
+    animation: first 1s ease infinite;
+    animation-delay: .1s;
+}
+.loadin div:nth-child(3){
+    animation: first 1s ease infinite;
+    animation-delay: .2s;
+}
+.loadin img{
+    background-color: aqua;
+    width: 18px;
+    height: auto;
+}
+.loadin h2{
+    font-size: 19px;
+    font-weight: 600;
+}
+.info p{
+    color: blue;
+    font-size: 14px;
+}
+@keyframes first {
+    100%{
+        transform: scale(0%);
+        opacity: 0;
+    }
+}
+@keyframes first1 {
+    100%{
+        transform: scale(0%);
+        opacity: 0;
+    }
+}
+@keyframes first2 {
+    100%{
+        transform: scale(0%);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 900px) {
+   .main{
+    width: 100%;
+   }
+   .nav{
+    width: 100vw;
+    height: 70px;
+   }
+   .step{
+    flex-direction: column;
+    gap: 30px;
+   }
+   .other-action{
+    grid-template-columns: 1fr;
+   }
+   .head{
+    padding: 100px 20px;
+    height: 500px;
+   }
+   
+   .head h1{
+    font-size: 40px;
+   }
+   .head p{
+    margin-top: 20px;
+    width: 100%;
+    font-size: 10px;
+   }
+   .nav-2 h1{
+    font-size: 20px;
+   }
+   .nav-2{
+    padding: 0px;
+    
+   }
+   .set-wallet{
+    grid-template-columns: 1fr 1fr;
+   }
+   .cont{
+    width: 300px;
+    padding: 10px;
+   }
+   .but button{
+    width:130px ;
+   }
+   .cont1,
+   .cont2,
+   .cont3{
+    padding: 0px;
+   }
+   .cont2 textarea,
+.cont1 textarea{
+    width: 90%;
+}
+.cont2 input,
+.cont3 input,
+.cont1 input{
+    width: 90%;
+  
+}
+.but{
+    width: 90%;
+  
+}
+.cont2 h1,
+.cont1 h1{
+    font-size: 20px;
+}
+.cont2 p,
+.cont3 p,
+.cont1 p{
+    font-size: 10px;
+    width: 90%;
+}
+.label div{
+    font-size: 12px;
+    height: 30px;
+}
+.info{
+    transform: scale(70%);
+}
+.nav-connect{
+    transform: scale(70%);
+}
+
+}
+@media screen and (max-width: 500px ) {
+    .set-wallet{
+        grid-template-columns:  1fr;
+       }
+}
