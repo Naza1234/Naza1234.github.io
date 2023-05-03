@@ -345,6 +345,89 @@ header .write{
 }
 
 
+
+
+
+
+/* sign up page */
+
+
+
+
+
+.sign-body{
+    background-image: url("https://e0.pxfuel.com/wallpapers/44/949/desktop-wallpaper-bitcoin-background-bitcoin-mining.jpg");
+    width: 100vw;
+    height: 100vh;
+}
+
+.sign-body .form{
+    width: 400px;
+    height: 450px;
+    background-color: rgba(73, 72, 72, 0.432);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.sign-body .form-2{
+    height: 400px;
+}
+.form h1{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+.form input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: rgba(199, 152, 33, 0.308);
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 5px;
+    color: #fff;
+    outline: none;
+}
+.form input::placeholder{
+    color: #ffffff91;
+}
+
+.form button{
+    width: 180px;
+    height: 40px;
+    align-self: center;
+    border: none;
+    background-color: goldenrod;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+}
+.form p{
+    font-size: 12px;
+    opacity: .6;
+    text-align: center;
+    color: #fff;
+}
+.form a{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width : 1000px) {
     header{
         margin-top: 70px;
@@ -613,5 +696,17 @@ header .write{
     }
     .footer p{
         font-size: 10px;
+    }
+
+
+
+
+
+
+    /* sign up */
+
+
+    .sign-body .form{
+        width: 90%;
     }
 }
