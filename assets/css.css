@@ -1,0 +1,617 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Open+Sans:wght@300;500;600;700;800&display=swap');
+*{
+    box-sizing: border-box;
+    cursor: context-menu;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Open Sans';
+    /* position: relative; */
+}
+.flex{
+    display: flex;
+}
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    background-color:  #000000;
+}
+
+.main{
+    width: 1200px;
+    overflow-x: hidden;
+    position: relative;
+}
+nav{
+    height: 70px;
+    width: 100%;
+
+    background-color: rgba(218, 165, 32, 0.63);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10vw;
+    z-index: 10;
+    top: 0;
+}
+.logo{
+    font-size: 30px;
+    font-weight: 700;
+    color: #fff;
+}
+.logo b{
+    font-size: 30px;
+    font-weight: 700;
+    color:#000;
+}
+nav button{
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 120px;
+    height: 35px;
+    background-color: black;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+header{
+    position: relative;
+    width: 100%;
+    height: 700px;
+    z-index: 4;
+}
+header .img{
+    position: absolute;
+    width:100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+}
+header .write{
+    position: absolute;
+    top: 0;
+    left: 0;
+    gap: 20px;
+    padding: 100px 100px;
+}
+.write h1{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 500;
+    width: 50%;
+}
+.write p{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    width: 40%;
+    opacity: .6;
+}
+.write button{
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: goldenrod;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+}
+.Benefit{
+    gap: 20px;
+    margin-top: 5vw;
+}
+.Benefit div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(218, 165, 32, 0.356);
+    backdrop-filter: blur(5px);
+    gap: 10px;
+}
+.Benefit div img{
+    width: 50px;
+    height: 50px;
+}
+
+.Benefit div h2{
+    font-weight: 400;
+    font-size: 12px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+.dit{
+    width: 100%;
+    min-height: 600px;
+    padding-top: 100px;
+}
+.sub-dit{
+    width: 100%;
+    height: 600px;
+    align-items: center;
+    justify-content:center;
+    gap: 60px;
+}
+.sub-dit .write{
+    width: 400px;
+}
+.sub-dit .write h3{
+    color: goldenrod;
+    font-size: 55px;
+    text-align: right;
+    font-weight: 700;
+}
+.sub-dit .write h6{
+    color: #ffffff;
+    opacity: .7;
+    text-align: right;
+    font-size: 25px;
+    font-weight: 500;
+}
+.sub-dit img{
+    box-shadow:10px 10px 50px 0px  rgba(138, 137, 135,.3);
+    border-radius: 30px;
+}
+.sub-dit .write:nth-child(2) h3{
+    color: goldenrod;
+    font-size: 55px;
+    text-align: left;
+    font-weight: 700;
+}
+.sub-dit .write:nth-child(2) h6{
+    color: #ffffff;
+    opacity: .7;
+    text-align:left;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.sos{
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 5vw;
+}
+.sos div{
+    border-radius: 10px;
+    background-color: rgba(138, 138, 137, 0.4);
+    width: 350px;
+    height: 350px;
+    /* backdrop-filter: blur(10px); */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sos img{
+    width: 40px;
+    height: 40px;
+}
+.sos h5{
+    font-weight: 600;
+    color: goldenrod;
+    font-size: 30px;
+}
+.sos p{
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+}
+.sos button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #fff;
+    background-color: goldenrod;
+    border: none;
+}
+.invest{
+    width: 100%;
+    gap: 50px;
+    margin-top: 5vw;
+    margin-bottom: 10vw;
+}
+ .invest h1{
+    font-size: 40px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: capitalize;
+ }
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.pop{
+    justify-self: center;
+    align-self: center;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    padding: 20px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #7a7a7a36;
+    /* box-shadow: 0px 0px 40px -10px rgba(255, 217, 0, 0.356); */
+}
+.pop:hover{
+    background-color: #0000006c;
+}
+.pop h1{
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+}
+.pop h2{
+    font-size: 25px;
+    font-weight: 700;
+    color: goldenrod;
+    text-transform: capitalize;
+}
+.pop p{
+    font-size: 16px;
+    font-weight: 400;
+    color: #7a7a7a;
+    text-transform: capitalize;
+}
+.pop img{
+    position: absolute;
+    bottom: -100%;
+    left: -15%;
+    z-index: -1;
+}
+.final{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    height: 700px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.final h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+}
+.final p{
+    font-size: 25px;
+    width: 40%;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+}
+.final button{
+    border: none;
+    background-color: goldenrod;
+    width: 180px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    margin-top: 5vw;
+}
+.final .img{
+    position: absolute;
+    bottom: -35%;
+    border-radius: 30px;
+    box-shadow: 0px 0px 30px 0px rgba(128, 128, 128, 0.37);
+}
+.final .back{
+    position: absolute;
+    z-index: -1;
+    width: 1000px;
+    height: auto;
+}
+.footer{
+    background-color: goldenrod;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 30px;
+    padding-bottom: 50px;
+}
+.footer p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #ffffff7a;
+}
+
+
+@media screen and (max-width : 1000px) {
+    header{
+        margin-top: 70px;
+        height: 400px;
+        z-index: 4;
+    }
+    header .img{
+    }
+    header .write{
+        gap: 10px;
+        padding: 0px 10px;
+    }
+    .write h1{
+        font-size: 40px;
+        font-weight: 600;
+        width: 52%;
+        line-height: 55px;
+    }
+    .write p{
+        color: #fff;
+        font-size: 12px;
+        font-weight: 400;
+        width: 40%;
+        opacity: .6;
+    }
+    .write button{
+       font-size: 12px;
+    }
+    .Benefit{
+        gap: 10px;
+    }
+    .Benefit div{
+      width: 80px;
+      height: 80px;
+    }
+    .Benefit div img{
+       width: 25px;
+       height: 25px;
+    }
+    
+    .Benefit div h2{
+        font-size: 11px;
+    }
+    
+
+    .dit{
+       
+    }
+    .sub-dit{
+       height: 400px;
+    }
+    .sub-dit .write{
+        width: 40%;
+    }
+    .sub-dit .write h3{
+     font-size:25px;
+    }
+    .sub-dit .write h6{
+       font-size: 16px;
+    }
+    .sub-dit img{
+       width: 200px;
+       height: auto;
+    }
+    .sub-dit .write:nth-child(2) h3{
+        font-size:25px;
+    }
+    .sub-dit .write:nth-child(2) h6{
+        font-size: 16px;
+    }
+    
+
+    .sos{
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 5vw;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .sos div{
+       align-self: center;
+    }
+    .sos img{
+       
+    }
+    .sos h5{
+       
+    }
+    .sos p{
+       
+    }
+    .sos button{
+       
+    }
+    .invest{
+        margin-top: 8vw;
+        margin-bottom: 10vw;
+    }
+     .invest h1{
+        font-size: 30px;
+        padding-left: 20px;
+     }
+    .grid{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+
+    }
+    .pop{
+        
+    }
+    .pop:hover{
+       
+    }
+    .pop h1{
+       
+    }
+    .pop h2{
+        
+    }
+    .pop p{
+        
+    }
+    .pop img{
+       
+    }
+}
+@media screen and (max-width :600px) {
+    .logo{
+        font-size: 20px;
+    }
+    .logo b{
+        font-size: 20px;
+    }
+    nav{
+        height: 60px;
+    }
+    nav button{
+        width: 100px;
+        font-size: 12px;
+    }
+    header{
+        margin-top: 60px;
+        height: 400px;
+        z-index: 4;
+    }
+    header .img{
+        width: auto;
+    }
+    header .write{
+        gap: 10px;
+        width: 100%;
+        padding: 50px 10px;
+        align-items: center;
+    }
+    .write h1{
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .write p{
+        text-align: center;
+    }
+    .write button{
+       font-size: 12px;
+    }
+    
+    .dit{
+       margin-top: 2vw;
+       padding-top: 20px;
+    }
+    .sub-dit{
+       height: auto;
+       flex-direction: column;
+       gap: 10px;
+       margin-top: 10vw;
+    }
+    .sub-dit .write{
+        width: 80%;
+        text-align: center;
+    }
+    .sub-dit .write h3{
+     font-size:20px;
+     text-align: center;
+    }
+    .sub-dit .write h6{
+       font-size: 12px;
+       text-align: center;
+    }
+    .sub-dit img{
+       width: 200px;
+       height: auto;
+    }
+    .sub-dit:nth-child(2){
+        flex-direction: column-reverse;
+    }
+    .sub-dit .write:nth-child(2) h3{
+        font-size:20px;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    .sub-dit .write:nth-child(2) h6{
+        font-size: 12px;
+        text-align: center;
+    }
+    
+
+    .sos{
+        width: 100%;
+        justify-content: space-around;
+        margin-top: 15vw;
+        flex-direction: column;
+        gap: 40px;
+    }
+    .sos div{
+       align-self: center;
+       width: 300px;
+       padding: 30px;
+       height: 300px;
+    }
+    .sos img{
+       width: 30px;
+       height: auto;
+    }
+    .sos h5{
+       font-size: 25px;
+    }
+    .sos p{
+       font-size: 14px;
+    }
+    
+    .invest{
+        margin-top: 8vw;
+        margin-bottom: 10vw;
+    }
+     .invest h1{
+        font-size: 20px;
+        padding-left: 20px;
+     }
+    .grid{
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+
+    }
+    .pop{
+        width: 250px;
+        height: 250px;
+    }
+    .pop:hover{
+       
+    }
+    .pop h1{
+       padding: 0;
+    }
+    .final h1{
+        font-size: 30px;
+        font-weight: 700;
+        color: #fff;
+        width: 90%;
+    }
+    .final p{
+        font-size: 20px;
+        width: 80%;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.9);
+    }
+    .footer p{
+        font-size: 10px;
+    }
+}
