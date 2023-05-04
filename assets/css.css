@@ -7,6 +7,8 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Open Sans';
+    border: none;
+    outline: none;
     /* position: relative; */
 }
 .flex{
@@ -17,6 +19,10 @@
 }
 .column{
     flex-direction: column;
+}
+.wrap{
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .center{
     align-items: center;
@@ -374,6 +380,9 @@ header .write{
 .sign-body .form-2{
     height: 400px;
 }
+.sign-body .form .logo b{
+    color: goldenrod;
+}
 .form h1{
     font-size: 20px;
     font-weight: 400;
@@ -416,6 +425,399 @@ header .write{
 .form a{
     cursor: pointer;
 }
+
+
+
+/* dash board */
+
+.dash-body{
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    justify-content: center;
+}
+
+
+.nav{
+    width: 300px;
+    height: 100vh;
+    align-items: center;
+    gap: 40px;
+    padding-top: 3vw;
+}
+.nav .logo b{
+    color: goldenrod;
+}
+
+.nav ul{
+    margin-top: 7vw;
+    width: 80%;
+    /* background-color: #7a7a7a44; */
+    padding: 10px;
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.nav .li{
+    width: 100%;
+    height: 40px;
+    color: white;
+    background-color: #ffffff11;
+    cursor: pointer;
+    padding: 0px 20px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    border-radius: 10px;
+}
+
+.nav .li img{
+    width: 20px;
+    height: auto;
+}
+.nav .li:hover{
+    background-color: rgb(218, 165, 32);
+}
+.nav  .active{
+    background-color: rgb(218, 165, 32);
+}
+.nav button{
+    width: 60%;
+    align-self: center;
+    margin-top: 7vw;
+    text-align: center;
+}
+.cont{
+    width: 78vw;
+    min-height: 90vh;
+    background-color: #ffffff11;
+    margin-top: 5vh;
+    border-radius: 20px;
+}
+
+.money{
+    width: 100%;
+    height: fit-content;
+    gap: 10px;
+    padding: 40px 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.money div{
+    width: 240px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: #000;
+    position: relative;
+    padding: 20px;
+    justify-content: space-between;
+    align-content: center;
+    overflow: hidden;
+}
+.money div h1{
+    color:white;
+    font-size: 100%;
+    text-transform: capitalize;
+    opacity:.6;
+    font-weight:500;
+    width: 50%;
+}
+.money div::before{
+    content: "";
+    width: 200px;
+    height: 200px;
+    background-color: goldenrod;
+    position: absolute;
+    transform: rotate(45deg);
+    right: -50%;
+    top: -50%;
+    z-index: 0;
+}
+.money div p{
+    position: relative;
+    color: black;
+    width: 30%;
+    align-self: center;
+    font-weight: 500;
+}
+
+
+hr{
+    border: none;
+    height: 2px;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 1000px;
+    align-self: center;
+}
+
+.cont .h1{
+    font-size: 30px;
+    margin: 3vw;
+    color: #fff;
+}
+
+.scroll{
+    width: 95%;
+    height: 350px;
+    align-self: center;
+    overflow-y: scroll;
+    padding: 20px;
+}
+::-webkit-scrollbar{
+    width: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: goldenrod;
+    border-radius: 1000px;
+}
+.scrulable{
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    display: flex;
+    min-height: 700px;
+}
+
+.plan{
+    margin-top: 3vw;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: #00000034;
+    padding: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.plan .sp{
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+.plan .sp h1{
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #fff;
+}
+.plan .sp p{
+    font-size: 16px;
+    font-weight: 400;
+    color: goldenrod;
+}
+
+.plan div{
+    justify-content: space-between;
+    
+}
+.plan div span{
+    width: 30%;
+    height: max-content;
+    gap: 0px;
+    border-radius: 5px;
+    border: 2px solid goldenrod;
+    padding: 10px;
+    position: relative;
+}
+.plan div span h1{
+    font-size: 14px;
+    font-weight: 300;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+    position: relative;
+}
+.plan div span p{
+    position: relative;
+    font-size: 14px;
+    font-weight: 300;
+    color: goldenrod;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.plan img{
+    position: absolute;
+    bottom: -50%;
+}
+
+.f-w{
+    height: 530px;
+}
+
+
+
+
+/* fund */
+
+
+.payment{
+    width: 350px;
+    height: 400px;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 10px;
+    gap: 20px;
+    margin-top: 3vw;
+}
+.prove h2,
+.payment h2{
+    font-size: 25px;
+    font-weight: 400px;
+    color: goldenrod;
+    text-transform: capitalize;
+    text-align: center;
+}
+.prove .p,
+.payment .p{
+    font-size: 12px;
+    font-weight: 400px;
+    color: rgb(99, 99, 98);
+    text-transform: capitalize;
+    text-align: center;
+    width: 60%;
+    align-self: center;
+}
+.pay{
+    width: 100%;
+    background-color: #ffffff11;
+    height: 120px;
+    border-radius: 10px;
+    padding: 20px;
+    gap: 10px;
+}
+
+.pay img{
+    width: 35px;
+    height: auto;
+    border-radius: 10px;
+}
+.pay span{
+    gap: 30px;
+    align-items: center;
+}
+.pay span p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+}
+.pay span:nth-child(2){
+    width: 100%;
+    height: 45px;
+    padding: 10px;
+    border-radius: 100px;
+    text-align: center;
+    color: #fff;
+    background-color: #ffffff11;
+}
+
+.prove{
+    width: 350px;
+    margin-top: 3vw;
+    border-radius: 10px;
+    background-color: black;
+    padding: 10px;
+    height: 600px;
+    gap: 20px;
+}
+.prove button{
+    height: 40px;
+    width: 120px;
+    background-color: goldenrod;
+    font-size: larger;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    align-self: center;
+}
+.prove label{
+    background-color: #ffffff11;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+    height: 130px;
+}
+.prove .label{
+    height: 150px;
+}
+.prove label input{
+    height: 35px;
+    outline: none;
+    border-radius: 5px;
+    background-color: #ffffff59;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+.prove label input::placeholder{
+    color: #7a7a7a;
+}
+.prove .label textarea{
+    height: 100px;
+    outline: none;
+    border-radius: 5px;
+    background-color: #ffffff59;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* ticket */
+
+.contact{
+    width: 90%;
+    height: fit-content;
+    justify-self: center;
+    align-self: center;
+}
+.contact div{
+    width: 50%;
+    min-width: 350px;
+    height: 600px;
+    margin-top: 0;
+    border-radius: 0px 10px 10px 0px ;
+}
+button{
+    cursor: pointer;
+}
+.contact div button{
+    width: 180px;
+    height: 45px;
+}
+.contact div:first-child{
+    background-color: goldenrod;
+    border-radius: 10px 0px 0px 10px ;
+    padding:2vw 30px ;
+}
+.contact div:first-child h1{
+    font-size: 350%;
+    font-weight: 700;
+}
+.contact div:first-child p{
+    font-size: 20px;
+    opacity: .6;
+    margin-top: 5vw;
+    font-weight: 500;
+}
+
+
+
+
 
 
 
@@ -552,6 +954,98 @@ header .write{
     }
     .pop img{
        
+    }
+    .div{
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .line {
+        height: 20px;
+        width: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-around;
+    }
+
+    .line hr{
+        width: 20px;
+        height: 2px;
+        border-radius: 1000px;
+        background-color: #fff;
+        transition: .6s ease-in-out;
+    }
+    .line hr:nth-child(2){
+        width: 15px;
+        align-self: flex-end;
+    }
+    .line-out hr:nth-child(1){
+        transform: rotate(45deg);
+        align-self: center;
+        justify-self: center;
+        position: absolute;
+    }
+    .line-out hr:nth-child(2){
+        width: 0px;
+    }
+    .line-out hr:nth-child(3){
+        transform: rotate(-45deg);
+        align-self: center;
+        position: absolute;
+        justify-self: center;
+    }
+    .dash-body{
+        flex-direction: column;
+    }
+    .nav{
+        position: absolute;
+        background-color: #000;
+        overflow: hidden;
+        z-index: 10;
+        width: 100vw;
+        transition: 1s ease-in-out;
+        height: 50px;
+        left: 0;
+        top: 0;
+    }
+
+    .cont{
+        margin-top: 20vw;
+        justify-self: center;
+        width: 90vw;
+        padding: 10px 10px ;
+    }
+    .payment{
+        width: 100%;
+    }
+    .plan{
+        width: 270px;
+        height: 250px;
+    }
+    .contact div:first-child{
+        background-color: goldenrod;
+        border-radius: 10px 10px 10px 10px ;
+        padding:2vw 30px ;
+        height: 300px;
+        margin-bottom:5vw;
+    }
+    .contact div{
+        border-radius: 10px;
+    }
+    .contact div:first-child h1{
+        font-size: 30px;
+        font-weight: 800;
+    }
+    .contact div:first-child p{
+        font-size: 16px;
+        opacity: .6;
+        margin-top: 3vw;
+        font-weight: 500;
+    }
+    
+    .nav-out{
+        height: 550px;
     }
 }
 @media screen and (max-width :600px) {
@@ -708,5 +1202,110 @@ header .write{
 
     .sign-body .form{
         width: 90%;
+    }
+    .money {
+        padding: 10px 0px;
+        gap: 10px;
+    }
+    .money div{
+        width: 140px;
+        padding: 10px;
+        height: 60px;
+    }
+    .money div::before{
+        width: 110px;
+        height: 120px;
+    }
+    .money div h1{
+        font-size: 10px;
+        margin: 0;
+        padding: 0;
+    }
+    hr{
+        height: 1px;
+    }
+    .cont .h1{
+        font-size: 20px;
+    }
+    .money div p{
+        font-size: 12px;
+    }
+    .cont{
+        width: 98vw;
+    }
+    .contact div{
+        width: 100px;
+    }
+    .plan{
+        padding: 10px;
+        width: 120px;
+        height: 120px;
+    }
+    .plan .sp{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0px;  
+        height: 35px;      
+    }
+    .plan .sp h1{
+        font-size: 10px;
+    }
+    .plan .sp p{
+        font-size: 10px;
+    }
+    .plan div{
+        margin-top: 2vw;
+        flex-direction: column;
+    }
+    .plan div span {
+        border: none;
+        width: 100%;
+        padding: 5px;
+        height: 30px;
+    }
+    .plan div span h1{
+        font-size: 10px;
+    }
+    .plan div span p{
+        font-size: 10px;
+    }
+    .plan img{
+        width: 100px;
+        left: 50%;
+    }
+    .prove h2, .payment h2{
+        font-size: 20px;
+    }
+    .prove .p, .payment .p{
+        width: 80%;
+    }
+    .pay img{
+        width: 30px;
+    }
+    .pay span p{
+        font-size: 16px;
+    }
+    .pay span:nth-child(2){
+        font-size: 12px;
+        letter-spacing:1px;
+    }
+    .contact{
+        width: 100%;
+    }
+    .contact div:first-child{
+        width: 100%;
+        padding: 10;
+    }
+    .contact div{
+        width: 100%;
+        padding: 10px;
+        min-width: 0px;
+    }
+    .scroll{
+        width: 98%;
+        padding: 10px;
+    }
+    .scrulable{
+        min-height: 100px;
     }
 }
