@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Open+Sans:wght@300;500;600;700;800&display=swap');
+*{
+    box-sizing: border-box;
+    cursor: context-menu;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Open Sans';
+    border: none;
+    outline: none;
+    /* position: relative; */
+}
+.flex{
+    display: flex;
+}
+.row{
+    flex-direction: row;
+    gap: 30px;
+}
+.column{
+    flex-direction: column;
+}
+.wrap{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+
+}
+::-webkit-scrollbar-thumb{
+    transition: .5s ease-in-out;
+    border-radius: 1000px;
+    background-color: goldenrod;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #ffffff79;
+}
+body{
+    min-height: 800px;
+    width: 100vw;
+    overflow-x: hidden;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("https://e0.pxfuel.com/wallpapers/44/949/desktop-wallpaper-bitcoin-background-bitcoin-mining.jpg");
+    background-color: #000000;
+}
+
+.nav{
+    width: 300px;
+    height: 100vh;
+    gap: calc(20px + 5vw);
+    padding: 25px;
+    /* background-color: aqua; */
+}
+.logo{
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    /* text-align:end; */
+}
+.logo b{
+    font-size: 30px;
+    font-weight: 600;
+    color: goldenrod;
+}
+.logo p{
+    text-transform: capitalize;
+    font-size: 14px;
+    color: #fff;
+    opacity: .6;
+    font-weight: 400;
+}
+.nav ul{
+    width: 95%;
+    align-self: center;
+    /* background-color:#ffffff52 ; */
+    gap: 20px;
+    padding: 20px 00px;
+    border-radius: 10px;
+
+}
+.nav ul .li{
+    width: 100%;
+    height: 35px;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    transition: .5s ease-in-out;
+}
+.nav ul .li img{
+    width: 20px;
+    height: auto;
+}
+.nav ul .li:hover{
+    background-color: goldenrod;
+}
+.active{
+
+    background-color: goldenrod;
+}
+.main{
+    width: 76vw;
+    height: 95vh;
+    background-color: #ffffff4f;
+    border-radius: 20px;
+    align-self: center;
+    justify-self: center;
+}
+.user{
+    min-width: 300px;
+    width: 60%;
+    gap: 20px;
+    padding: 3%;
+    /* background-color: #000000; */
+}
+
+.planes h1,
+.user h1{
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+}
+.user hr{
+    width: 100%;
+    align-self: center;
+    height: 1px;
+    background-color: #fff;
+}
+.sroll{
+    height: 580px;
+    width: 100%;
+    /* overflow-x: hidden; */
+    overflow-y: scroll;
+    padding: 10px;
+    gap: 20px;
+    /* background-color: #000000; */
+}
+.scrollabul{
+    width: 100%;
+    gap: 30px;
+    /* background-color: #000000; */
+}
+.planes{
+    min-width: 300px;
+    width: 35%;
+    gap: 20px;
+    padding: 1%;
+    background-color: #000000;
+    border-radius: 10px;
+    height: 700px;
+    align-self: center;
+}
+.planes h1{
+    margin-left: 3vw;
+    margin-top: 1vw;
+}
+
+
+.user-card{
+    width: 250px;
+    height: 250px;
+    padding: 20px;
+    background-color: #000000;
+    border-radius: 20px;
+    gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+.user-card img{
+    width: 50px;
+    height: 50px;
+}
+.user-card h1{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+}
+.user-card span{
+    width: 100%;
+    justify-content: space-between;
+}
+.user-card span h2{
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    opacity: .5;
+}
+.user-card span p{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: .8;
+}
+.plan-card{
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    justify-content: space-around;
+    background-color: #00000088;
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.404);
+}
+.plan-card h1{
+    margin: 0;
+    font-size: 18px;
+}
+.plan-card span{
+    width: 100%;
+    justify-content: space-between;
+}
+.plan-card span h2{
+    font-size: 16px;
+    color: #ffffffb4;
+    font-weight: 400;
+}
+.plan-card span p{
+    font-size: 16px;
+    color: #ffffffc0;
+    font-weight: 600;
+}
+.user-dit{
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+.user-dit img{
+    width: 70px;
+    height: 70px;
+    margin-top: 5vw;
+    margin-bottom: 3vw;
+}
+.user-dit h1{
+    font-size: 20px;
+    font-weight: 500;
+    align-self: center;
+    text-align: center;
+    text-transform: capitalize;
+    margin: 0;
+}
+.user-dit span{
+    width: 100%;
+    justify-content: space-between;
+}
+.user-dit h2{
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffffc0;
+    text-transform: capitalize;
+}
+.user-dit p{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+}
+.user-dit input{
+    width: 75px;
+    padding: 10px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+}
+.user-dit input:focus{
+    background-color: #ffffff5b;
+}
+.user-dit{
+    height: 100%;
+    position: relative;
+}
+.user-dit span:last-child{
+    position: absolute;
+    bottom: 20px;
+    width: 95%;
+    justify-content: space-between;
+}
+.user-dit span button{
+    width: 120px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #fff;
+}
+button{
+    cursor: pointer;
+}
+.user-dit span button:first-child{
+    background-color: red;
+}
+.user-dit span button:last-child{
+    background-color: goldenrod;
+}
+
+.form{
+    width: 100%;
+    gap: 20px;
+    padding: 30px;
+}
+.form h1{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.form p{
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: #fff;
+}
+.form input{
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    background-color: rgba(218, 165, 32, 0.26);
+    height: 45px;
+}
+.pri{
+    justify-content: space-between;
+    align-items: center;
+}
+.pri .plan-card{
+    width: 70%;
+    background-color: #000000;
+}
+.pri button{
+    font-size: 16px;
+    background-color: goldenrod;
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+.fond-req{
+    width: 100%;
+    height: 70px;
+    padding: 10px 30px;
+    background-color: black;
+    border-radius: 5px;
+    align-items: center;
+    align-items: center;
+}
+.fond-req span{
+    width: 70%;
+    align-items: center;
+}
+.fond-req span h2{
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffffc0;
+    text-transform: capitalize;
+}
+.fond-req span p{
+    color: #fff;
+    font-size: 14px;
+}
+.fond-req button{
+    font-size: 16px;
+    background-color: rgba(189, 187, 182, 0.425);
+    border-radius: 5px;
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    outline: none;
+}
+.fond-req button:hover{
+    background-color: goldenrod;
+}
+.meth{
+    width: 100%;
+    background-color: #000000;
+    border-radius: 10PX;
+    height: 100PX;
+    padding: 20px;
+    gap: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(255, 255, 255, 0.404);
+}
+.pri .meth{
+    width: 300px;
+}
+.meth span{
+    width: 100%;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 500;
+    gap: 20px;
+}
+.meth span img{
+   width: 30px;
+   height: 30px;
+   border-radius: 5px;
+}
+.meth span:last-child{
+    width: 100%;
+    border-radius: 100px;
+    background-color: #ffffff60;
+    padding: 5px;
+    text-align: center;
+}
+.meth span:last-child p{
+    font-size: 14px;
+    opacity: .7;
+}
+
+
+
+
+
+@media screen and (max-width : 1200px) {
+    .nav{
+        position: fixed;
+        overflow: hidden;
+        width: 100vw;
+        top: 0;
+        z-index: 10;
+        height: 100px;
+        padding: 20px 5vw;
+        transition: .5s ease-in-out;
+        background-color: #000000;
+    }
+    .nav-out{
+        height: 100vh;
+    }
+    .div{
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .line {
+        height: 20px;
+        width: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-around;
+    }
+
+    .line hr{
+        width: 20px;
+        height: 2px;
+        border-radius: 1000px;
+        background-color: #fff;
+        transition: .6s ease-in-out;
+    }
+    .line hr:nth-child(2){
+        width: 15px;
+        align-self: flex-end;
+    }
+    .line-out hr:nth-child(1){
+        transform: rotate(45deg);
+        align-self: center;
+        justify-self: center;
+        position: absolute;
+    }
+    .line-out hr:nth-child(2){
+        width: 0px;
+    }
+    .line-out hr:nth-child(3){
+        transform: rotate(-45deg);
+        align-self: center;
+        position: absolute;
+        justify-self: center;
+    }
+    .main{
+        height: fit-content;
+        padding: 50px;
+        align-self: center;
+        justify-self: center;
+        width: 98%;
+        position: absolute;
+        top: 100px;
+        gap: 40px;
+    }
+    .planes,
+    .user{
+        padding: 20px;
+        width: 99%;
+    }
+}
+
+@media screen and (max-width : 600px) {
+    ::-webkit-scrollbar{
+        width: 2px;
+        height: 2px;
+    
+    }
+    .planes h1, .user h1 {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+    }
+    .planes, .user{
+        height: fit-content;
+    }
+    .user-dit{
+        padding: 0;
+    }
+    .user-dit span:last-child{
+        position: relative;
+        width: 100%;
+        margin-top: 20px;
+
+        justify-content: space-between;
+    }
+    .user{
+        padding: 0px;
+        width: 99%;
+    }
+    .planes{
+        padding: 10px;
+    }
+    .form{
+        padding: 0;
+    }
+    .form input{
+        height: 25px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    .pri{
+        padding: 0;
+        gap: 20px;
+    }
+    .fond-req{
+        padding: 10px;
+    }
+    .pri .plan-card{
+        width: 100%;
+    }
+}
