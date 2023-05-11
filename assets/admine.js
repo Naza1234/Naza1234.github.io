@@ -1,4 +1,4 @@
-const newurl="http://localhost:3000"
+const newurl="https://invest-sevrer.onrender.com"
 
 
 
