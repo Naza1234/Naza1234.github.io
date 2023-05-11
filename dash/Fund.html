@@ -36,7 +36,7 @@
             <img src="../assets/image/tickets.png" alt="">
             tickets</li></a>
       </ul>
-      <button class="li active flex center">
+      <button class="li active flex center button" onclick="logout()">
         Log Out
       </button>
     </div>
@@ -54,18 +54,11 @@
         </p>
      
      
-     
-        <div class="pay flex column">
-        <span class="name flex row">
-            <img src="data:image/png;base64,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" alt="">
-            <p>
-                paypal.
-            </p>
-        </span>
-        <span>
-            u12b6y32382g6gh372jue3788293
-        </span>
-      </div>
+     <div class="flex column payget">
+
+       
+       
+     </div>
     
     
     
@@ -90,17 +83,85 @@
         </label>
           
         <label class="label">
-            shot description
-            <textarea name="text" class="message" placeholder="i deposite dthe sum of $***** thanks."></textarea>
+            amount
+            <input type="text" class="name-ID" placeholder="10000">
         </label>
-         <button>
+         <button onclick="send()">
             Send
          </button>
      </div>
 
 
-
+     <section class="popup">
+        <svg viewBox="0 0 100 100">
+          <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+            <!-- left line -->
+            <path d="M 21 40 V 59">
+              <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              values="0 21 59; 180 21 59"
+              dur="2s"
+              repeatCount="indefinite" />
+            </path>
+            <!-- right line -->
+            <path d="M 79 40 V 59">
+              <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="rotate"
+              values="0 79 59; -180 79 59"
+              dur="2s"
+              repeatCount="indefinite" />
+            </path>
+            <!-- top line -->
+            <path d="M 50 21 V 40">
+              <animate
+              attributeName="d"
+              values="M 50 21 V 40; M 50 59 V 40"
+              dur="2s"
+              repeatCount="indefinite" />
+            </path>
+            <!-- btm line -->
+            <path d="M 50 60 V 79">
+              <animate
+              attributeName="d"
+              values="M 50 60 V 79; M 50 98 V 79"
+              dur="2s"
+              repeatCount="indefinite" />
+            </path>
+            <!-- top box -->
+            <path d="M 50 21 L 79 40 L 50 60 L 21 40 Z">
+            <animate
+              attributeName="stroke"
+              values="rgba(255,255,255,1); rgba(100,100,100,0)"
+              dur="2s"
+              repeatCount="indefinite" />
+            </path>
+            <!-- mid box -->
+            <path d="M 50 40 L 79 59 L 50 79 L 21 59 Z"/>
+            <!-- btm box -->
+            <path d="M 50 59 L 79 78 L 50 98 L 21 78 Z">
+            <animate
+              attributeName="stroke"
+              values="rgba(100,100,100,0); rgba(255,255,255,1)"
+              dur="2s"
+              repeatCount="indefinite" />
+            </path>
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="translate"
+              values="0 0; 0 -19"
+              dur="2s"
+              repeatCount="indefinite" />
+          </g>
+        </svg>
+        
+      </section>
     </section>
     <script src="../assets/func.js"></script>
+    <script src="../user js/fund.js"></script>
 </body>
 </html>

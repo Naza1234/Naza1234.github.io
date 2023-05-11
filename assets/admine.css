@@ -11,6 +11,32 @@
     outline: none;
     /* position: relative; */
 }
+:root {
+
+    /**
+     * colors
+     */
+    
+    --cadet-blue-crayola: hsl(227, 13%, 73%);
+    --maximum-yellow-red: hsl(41, 95%, 61%);
+    --medium-sea-green: hsl(142, 43%, 54%);
+    --blue-crayola_10: hsla(222, 100%, 61%, 0.05);
+    --smocky-black_30: hsla(0, 0%, 6%, 0.3);
+    --eerie-black-1: hsl(240, 5%, 8%);
+    --eerie-black-2: hsl(228, 9%, 10%);
+    --raisin-black: hsl(225, 15%, 16%);
+    --blue-crayola: hsl(222, 100%, 61%);
+    --roman-silver: hsl(223, 10%, 52%);
+    --presian-red: hsl(0, 64%, 52%);
+    --gunmetal_50: hsla(230, 16%, 22%, 0.5);
+    --gainsboro: hsl(0, 0%, 85%);
+    --cultured: hsl(0, 0%, 93%);
+    --white_50: hsla(0, 0%, 100%, 0.5);
+    --white_30: hsla(0, 0%, 100%, 0.3);
+    --white_10: hsla(0, 0%, 100%, 0.1);
+    --black_10: hsla(0, 0%, 0%, 0.1);
+    --white: hsl(0, 0%, 100%);
+  }
 .flex{
     display: flex;
 }
@@ -37,7 +63,7 @@
 ::-webkit-scrollbar-thumb{
     transition: .5s ease-in-out;
     border-radius: 1000px;
-    background-color: goldenrod;
+    background-color: var(--blue-crayola);
 }
 ::-webkit-scrollbar-thumb:hover{
     background-color: #ffffff79;
@@ -50,7 +76,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("https://e0.pxfuel.com/wallpapers/44/949/desktop-wallpaper-bitcoin-background-bitcoin-mining.jpg");
+    background-color: var(--eerie-black-1);
     background-color: #000000;
 }
 
@@ -70,7 +96,7 @@ body{
 .logo b{
     font-size: 30px;
     font-weight: 600;
-    color: goldenrod;
+    color: var(--blue-crayola);
 }
 .logo p{
     text-transform: capitalize;
@@ -80,7 +106,7 @@ body{
     font-weight: 400;
 }
 .nav ul{
-    width: 95%;
+    width: 100%;
     align-self: center;
     /* background-color:#ffffff52 ; */
     gap: 20px;
@@ -88,9 +114,10 @@ body{
     border-radius: 10px;
 
 }
-.nav ul .li{
+ .li{
     width: 100%;
     height: 35px;
+    background-color: var(--eerie-black-2);
     text-transform: capitalize;
     font-size: 16px;
     font-weight: 500;
@@ -108,11 +135,11 @@ body{
     height: auto;
 }
 .nav ul .li:hover{
-    background-color: goldenrod;
+    background-color: var(--blue-crayola);
 }
 .active{
 
-    background-color: goldenrod;
+    background-color: var(--blue-crayola);
 }
 .main{
     width: 76vw;
@@ -309,7 +336,7 @@ button{
     background-color: red;
 }
 .user-dit span button:last-child{
-    background-color: goldenrod;
+    background-color: var(--blue-crayola);
 }
 
 .form{
@@ -337,7 +364,7 @@ button{
     font-size: 16px;
     font-weight: 400;
     color: #fff;
-    background-color: rgba(218, 165, 32, 0.26);
+    background-color: var(--roman-silver);
     height: 45px;
 }
 .pri{
@@ -350,7 +377,7 @@ button{
 }
 .pri button{
     font-size: 16px;
-    background-color: goldenrod;
+    background-color: var(--blue-crayola);
     border-radius: 5px;
     width: 120px;
     height: 40px;
@@ -394,7 +421,7 @@ button{
     outline: none;
 }
 .fond-req button:hover{
-    background-color: goldenrod;
+    background-color: var(--blue-crayola);
 }
 .meth{
     width: 100%;
@@ -432,11 +459,79 @@ button{
     opacity: .7;
 }
 
+.popup{
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    background-color:var(--smocky-black_30);
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transform: scale(0%);
+}
+.popup-hid{
+    transform: scale(100%);
+}
+.up{
+    position: absolute;
+    width: 250px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 180px;
+    color: #fff;
+    background-color:var(--gunmetal_50);
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+}
+.up div{
+    width: 100%;
+    justify-content: space-between;
+}
+.up button{
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    color: wheat;
+}
+.up button:nth-child(1){
+    background-color: var(--medium-sea-green);
+}
+.up button:nth-child(2){
+    background-color: var(--presian-red);
+}
+.up button a{
+    color: #fff;
+}
+
+svg {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 150px;
+	width: 150px;
+}
+
+
+
 
 
 
 
 @media screen and (max-width : 1200px) {
+    .popup{
+        width: 100vw;
+        height: 100vh;
+        top: -0px;
+    }
     .nav{
         position: fixed;
         overflow: hidden;
@@ -557,4 +652,90 @@ button{
     .pri .plan-card{
         width: 100%;
     }
+}
+
+
+
+
+.hid{
+    display: none;
+}
+.userC img{
+    pointer-events: none;
+}
+.userC h1{
+    pointer-events: none;
+}
+.userC span{
+    pointer-events: none;
+}
+.del{
+    background-color: rgba(255, 0, 0, 0.384);
+    padding: 5px;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 400;
+    border-radius: 5px;
+    pointer-events: visible;
+}
+.del:hover{
+    background-color: red;
+}
+.freq,
+.freq span,
+.planCard h2,
+.planCard p,
+.planCard{
+    pointer-events: none;
+}
+.freq button{
+    pointer-events: visible;
+}
+.red{
+    background: green;
+}
+
+.nav ul .li{
+    position: relative;
+    width: 100%;
+    gap: 10px;
+}
+.pr{
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.pr .lenth{
+    min-width: 35px;
+}
+.lenth{
+    background-color: var(--blue-crayola);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    position: absolute;
+    right: 10px;
+    overflow: hidden;
+}
+.h3{
+    color: #fff;
+}
+.meth span{
+    position: relative;
+}
+.de{
+    justify-self: flex-end;
+    align-self: center;
+    position: absolute;
+    right: 2%;
+}
+.planes h1{
+    text-align: left;
+    width: 100%;
 }

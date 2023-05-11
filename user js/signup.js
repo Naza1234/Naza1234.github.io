@@ -1,9 +1,9 @@
 
-const url="http://localhost:3000"
-
+const url="https://invest-sevrer.onrender.com"
+const redURL="http://127.0.0.1:5500"
 
 function singup(){
-    
+    document.getElementsByClassName('popup')[0].classList.add('popup-hid')
     
     let  name1=document.getElementsByClassName('username')[0].value
     let  password=document.getElementsByClassName('password')[0].value
@@ -38,7 +38,7 @@ function singup(){
         .then((data)=>{
             localStorage.setItem("userID",data._id)
             console.log(data);
-            window.location.href="http://127.0.0.1:5500/dash/home.html"
+            window.location.href=`${redURL}/dash/home.html`
         })
     }
          
