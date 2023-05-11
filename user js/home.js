@@ -1,5 +1,5 @@
 const url="https://invest-sevrer.onrender.com"
-const redURL="https://www.nazatech.me"
+const redURL="https://nazatech.me"
 
 let userID=localStorage.getItem("userID")
 

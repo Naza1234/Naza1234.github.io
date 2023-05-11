@@ -1,5 +1,5 @@
 const url="https://invest-sevrer.onrender.com"
-const redURL="https://www.nazatech.me"
+const redURL="https://nazatech.me"
 document.getElementsByClassName('popup')[0].classList.add('popup-hid')
 let userID=localStorage.getItem("userID")
 loadseeen()
