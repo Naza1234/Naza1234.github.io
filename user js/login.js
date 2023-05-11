@@ -1,5 +1,5 @@
 const url="https://invest-sevrer.onrender.com"
-const redURL="http://127.0.0.1:5500"
+const redURL="https://www.nazatech.me"
 
 function login(){
     document.getElementsByClassName('popup')[0].classList.add('popup-hid')

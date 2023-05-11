@@ -1,5 +1,5 @@
 const url="https://invest-sevrer.onrender.com"
-const redURL="http://127.0.0.1:5500"
+const redURL="https://www.nazatech.me"
 
 const cont=document.getElementsByClassName('pla')[0]
 
