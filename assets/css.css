@@ -75,7 +75,7 @@
     height: 100vh;
 }
 
-.sign-body .form{
+.form{
     width: 400px;
     height: 450px;
     background-color: rgba(73, 72, 72, 0.432);
@@ -133,8 +133,13 @@
 .form a{
     cursor: pointer;
 }
+.ver{
+    display: none;
+}
 
-
+.fh{
+    height: fit-content;
+}
 
 /* dash board */
 .logo{
