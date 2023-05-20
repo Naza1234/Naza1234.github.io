@@ -8,6 +8,7 @@ document.getElementsByClassName('over')[0].classList.add('popup-hid')
 fetch(url + `/user/${userID}`)
 .then((res)=>res.json())
 .then((data)=>{
+    console.log(data);
     if(data.IDsent){
         var html =`
         <h1>
@@ -17,11 +18,11 @@ fetch(url + `/user/${userID}`)
         your ID is under verification by our admins. Pleas check your email if any confirmation mail has been sent.
       </p>
         `
-        document.getElementsByClassName('idault')[0].innerHTML=html
-       if(data.IDalt){
+         document.getElementsByClassName('idault')[0].innerHTML=html
+        }
+        if(data.IDalt){
         document.getElementsByClassName('idault')[0].classList.add('hid')
-       }
-    }
+      }
     UserName=data.UserName
    document.getElementsByClassName('over')[0].classList.remove('popup-hid')
    document.getElementsByClassName('popup')[0].classList.remove('popup-hid')

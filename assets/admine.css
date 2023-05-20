@@ -280,16 +280,19 @@ body{
     text-transform: capitalize;
     margin: 0;
 }
+.id-dit span,
 .user-dit span{
     width: 100%;
     justify-content: space-between;
 }
+.id-dit,
 .user-dit h2{
     font-size: 16px;
     font-weight: 400;
     color: #ffffffc0;
     text-transform: capitalize;
 }
+.id-dit,
 .user-dit p{
     color: #fff;
     font-size: 14px;
@@ -319,6 +322,7 @@ body{
     width: 95%;
     justify-content: space-between;
 }
+.id-dit div button,
 .user-dit span button{
     width: 120px;
     height: 40px;
@@ -332,9 +336,11 @@ body{
 button{
     cursor: pointer;
 }
+.id-dit div button:first-child,
 .user-dit span button:first-child{
     background-color: red;
 }
+.id-dit div button:last-child,
 .user-dit span button:last-child{
     background-color: var(--blue-crayola);
 }
@@ -520,7 +526,29 @@ svg {
 	width: 150px;
 }
 
-
+.id-dit{
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 30px;
+    position: relative;
+}
+.id-dit img{
+   background-color: aliceblue;
+   width: 300px;
+   height: auto;
+}
+.id-dit span{
+    color: #fff;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.id-dit div{
+    width: calc(100% - 40px);
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+}
 
 
 
