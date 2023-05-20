@@ -666,10 +666,7 @@ button{
 .set div{
     pointer-events:none;
 }
-.p,
-.hid{
-    display: none;
-}
+
 .over{
     position: fixed;
     width: 100vw;
@@ -1312,3 +1309,7 @@ figcaption{
     }
 }
 
+.p,
+.hid{
+    display: none;
+}
