@@ -3,12 +3,12 @@ const redURL="https://nazatech.me"
 
 let userID=localStorage.getItem("userID")
 var UserName
+console.log(userID);
 document.getElementsByClassName('popup')[0].classList.add('popup-hid')
 document.getElementsByClassName('over')[0].classList.add('popup-hid')
 fetch(url + `/user/${userID}`)
 .then((res)=>res.json())
 .then((data)=>{
-    console.log(data);
     if(data.IDsent){
         var html =`
         <h1>
@@ -72,12 +72,12 @@ fetch(url + `/planin`)
     data.reverse()
    for (let i = 0; i < data.length; i++) {
     const element = data[i]
+    console.log(element.UserID);
      if(element.UserID===userID){
         document.getElementsByClassName('conex')[0].innerHTML=""
         fetch(url + `/plan/${element.PlanID}`)
       .then((res)=>res.json())
-       .then((element)=>{
-        element.reverse()
+       .then((newdatap)=>{
         var data = `
         <div class="plan set">
         <img src="../assets/image/Golden_Coins_3d_Vector__Golden_Bitcoin_Coin_3d_Rendering__Coin__Bitcoin__Btc_PNG_Image_For_Free_Download-removebg-preview.png"  alt="">
@@ -86,10 +86,10 @@ fetch(url + `/planin`)
                 Name of plan
             </h1>
              <p>
-                ${element.PlansName}
+                ${newdatap.PlansName}
              </p>
-             <p class="hid">${element._id}</p>
-             <p class="p">${element.PlansAmount}</p>
+             <p class="hid">${newdatap._id}</p>
+             <p class="p">${newdatap.PlansAmount}</p>
         </span>
        <div class="flex row">
         <span class="flex column">
@@ -97,7 +97,7 @@ fetch(url + `/planin`)
                 amount to be used
             </h1>
              <p>
-               $${element.PlansAmount}
+               $${newdatap.PlansAmount}
              </p>
         </span>
         <span class="flex column">
@@ -105,7 +105,7 @@ fetch(url + `/planin`)
         interest rate
             </h1>
             <p>
-                ${element.InterestPerAI}%
+                ${newdatap.InterestPerAI}%
              </p>
         </span>
        </div>

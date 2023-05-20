@@ -134,7 +134,7 @@ fetch(url + "/plan")
 })
 
 var amount
-let data ={}
+let datap ={}
 function canStart(){
     var item=document.getElementsByClassName('set')
     for (let i = 0; i < item.length; i++) {
@@ -148,11 +148,12 @@ function active(event){
     var newElement=event.target
     newElementId=newElement.getElementsByClassName('hid')[0].innerHTML
     amount=Number(newElement.getElementsByClassName('p')[0].innerHTML)
-    data={
+    datap={
         UserID:localStorage.getItem("userID"),
         PlanID:newElementId
     } 
-   document.getElementsByClassName('popup')[0].classList.add('popup-hid')
+    document.getElementsByClassName('popup')[0].classList.add('popup-hid')
+    console.log(datap);
 }
 }
 function addplan(){
@@ -244,7 +245,7 @@ function addplan(){
             console.log(data); 
             fetch(url + "/planin",{
                 method:'POST',
-                body: JSON.stringify(data),
+                body: JSON.stringify(datap),
                 headers: {
                     'Content-type':'application/json'
                 }
@@ -290,7 +291,7 @@ function addplan(){
 function out(){
     document.getElementsByClassName('popup')[0].classList.remove('popup-hid')
 }
-
+let userID=localStorage.getItem("userID")
 function logout(){
     localStorage.clear()
     window.location.href=`${redURL}/login.html`
