@@ -33,7 +33,7 @@ function start(){
                     Invested amount
                 </h2>
                 <p>
-                ${Intl.NumberFormat().format(data.UserInvestedAmount)}
+                $ ${Intl.NumberFormat().format(element.UserInvestedAmount)}
                 </p>
                 <p class="hid">${element._id}</p>
             </span>

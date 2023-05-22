@@ -24,15 +24,16 @@ fetch(url + "/user")
                 Account balance
             </h2>
             <p>
-            ${Intl.NumberFormat().format(data.UserTotalAmount)}
+            $ ${Intl.NumberFormat().format(element.UserTotalAmount)}
             </p>
             </span>
+
         <span class="flex row">
             <h2>
                 Invested amount
             </h2>
             <p>
-            ${Intl.NumberFormat().format(data.UserInvestedAmount)}
+           $ ${Intl.NumberFormat().format(element.UserInvestedAmount)}
             </p>
             </span>
         

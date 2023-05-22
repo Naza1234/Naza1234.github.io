@@ -628,6 +628,7 @@ svg {
     .user{
         padding: 20px;
         width: 99%;
+        
     }
 }
 
@@ -643,7 +644,8 @@ svg {
         text-align: center;
     }
     .planes, .user{
-        height: fit-content;
+        height: calc(fit-content + 50px);
+        min-height: 500px;
     }
     .user-dit{
         padding: 0;
