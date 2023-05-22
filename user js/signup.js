@@ -23,7 +23,8 @@ function ver(){
        document.getElementsByClassName('email')[0].classList.add('error')
     }
     var info={
-        email: Email
+        email: Email,
+        name:name1
     }
     if (name1 && password && Email) {
         fetch(url + "/email",{
