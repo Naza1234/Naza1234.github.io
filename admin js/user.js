@@ -25,15 +25,15 @@ function start(){
                 <h2>
                     amount 
                 </h2>
-                <p>$ ${new Intl.NumberFormat().format(element.UserTotalAmount)}
+                <p>$ ${Intl.NumberFormat().format(element.UserTotalAmount)}
                  </p>
             </span>
             <span class="flex row">
                 <h2>
-                    email
+                    Invested amount
                 </h2>
                 <p>
-                ${element.UserEmail}
+                ${Intl.NumberFormat().format(data.UserInvestedAmount)}
                 </p>
                 <p class="hid">${element._id}</p>
             </span>

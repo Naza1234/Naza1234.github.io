@@ -53,5 +53,18 @@ function start(){
         document.getElementsByClassName('lenth')[2].innerHTML=ticNom.length
        }
     })
+
+    fetch(newurl + "/userid")
+    .then((res)=>res.json())
+    .then((data)=>{
+       for (let t = 0;  t< data.length; t++) {
+        const element = data[t];
+        if(!element.Seen){
+            ticNom.push(element)
+        }
+        console.log("done");
+        document.getElementsByClassName('lenth')[3].innerHTML=ticNom.length
+       }
+    })
    
 }

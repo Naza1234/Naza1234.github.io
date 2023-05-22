@@ -186,7 +186,7 @@ var imgname=document.getElementsByClassName('nameid')[0]
                 ${data.UserName}
               </h1>
               <p>
-                your ID is under verification by our admins. Pleas check your email if any confirmation mail has been sent.
+              Your ID is currently under verification by our admins. Please check your email for a confirmation message. This message will contain a link that you must click to complete the verification process.
               </p>
                 `
                 document.getElementsByClassName('idault')[0].innerHTML=html

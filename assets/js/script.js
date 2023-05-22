@@ -74,3 +74,25 @@ const scrollReveal = function () {
 scrollReveal();
 
 addEventOnElem(window, "scroll", scrollReveal);
+
+
+
+
+fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Clitecoin%2Cdogecoin%2Cethereum&vs_currencies=usd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true&include_last_updated_at=true&precision=5')
+.then((res)=>res.json())
+.then((dataInfo)=>{
+    var coinPrice24=document.getElementsByClassName('last-24')
+    var coinPrice=document.getElementsByClassName('coin-price')
+    coinPrice[0].innerHTML=Intl.NumberFormat().format(dataInfo.bitcoin.usd)
+    coinPrice[1].innerHTML=Intl.NumberFormat().format(dataInfo.ethereum.usd)
+    coinPrice[2].innerHTML=Intl.NumberFormat().format(dataInfo.dogecoin.usd)
+    coinPrice[3].innerHTML=Intl.NumberFormat().format(dataInfo.litecoin.usd)
+   
+    coinPrice24[0].innerHTML=Intl.NumberFormat().format(dataInfo.bitcoin.usd_24h_change)
+    coinPrice24[1].innerHTML=Intl.NumberFormat().format(dataInfo.ethereum.usd_24h_change)
+    coinPrice24[2].innerHTML=Intl.NumberFormat().format(dataInfo.dogecoin.usd_24h_change)
+    coinPrice24[3].innerHTML=Intl.NumberFormat().format(dataInfo.litecoin.usd_24h_change)
+   
+    
+   
+})

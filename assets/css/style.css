@@ -283,7 +283,9 @@ body.active { overflow: hidden; }
   gap: 10px;
   margin-block-end: 15px;
 }
-
+.section-item .title-wrapper h2{
+  text-align: right;
+}
 .section-item .title-wrapper ion-icon {
   flex-shrink: 0;
   color: var(--blue-crayola);
@@ -551,8 +553,11 @@ body.active { overflow: hidden; }
 .market .btn-link:is(:hover, :focus)::after { background-color: var(--blue-crayola); }
 
 .market-tab {
-  overflow-x: auto;
-  padding-block-end: 30px;
+    overflow-x: scroll;
+    min-width: 300px;
+    max-width: fit-content;
+    width: 90vw;
+    padding-block-end: 30px;
 }
 
 .market-tab::-webkit-scrollbar { height: 14px; }
@@ -1209,4 +1214,7 @@ address.footer-contact-link { max-width: 30ch; }
 
   .footer-brand { grid-column: auto; }
 
+}
+.col{
+  flex-direction: column;
 }

@@ -110,8 +110,6 @@ function active(event){
 
 function deleteP(){
     document.getElementsByClassName('popup')[0].classList.add('popup-hid')
-    console.log(newElementId);
-    console.log(mail);
     var data={
         email:mail,
         name:uname
@@ -184,7 +182,21 @@ function update() {
         )
         .then((res)=>res.json())
         .then((data)=>{
-            start() 
+          var  iData={
+                Seen:true
+            }
+            fetch(url + `/userid/${newElementId}`,{
+                method:'PUT',
+                body: JSON.stringify(iData),
+                headers: {
+                    'Content-type':'application/json'
+                }
+            }
+            )
+            .then((res)=>res.json())
+            .then((data)=>{
+                start() 
+            })
         })
     })
 }
