@@ -1,4 +1,4 @@
-var re_url="http://127.0.0.1:5500"
+var re_url="https://nazatech.me"
 
 var  searchItem= document.getElementsByClassName('search')[0]
 
