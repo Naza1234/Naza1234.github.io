@@ -1,4 +1,4 @@
-var re_url="https://nazatech.me"
+var re_url="https://nazatech.me/aqure"
 
 var  searchItem= document.getElementsByClassName('search')[0]
 
@@ -16,9 +16,9 @@ function activeNav(){
 function search(){
     document.getElementsByClassName('div')[0].classList.toggle('div_active')
     if(document.getElementsByClassName('div')[0].classList.contains('div_active')){
-        document.getElementsByClassName('sine')[0].src="../assets/image/cancel.png"
+        document.getElementsByClassName('sine')[0].src=`${re_url}/assets/image/cancel.png`
     }else{
-        document.getElementsByClassName('sine')[0].src="../assets/image/search 1.png"
+        document.getElementsByClassName('sine')[0].src=`${re_url}/assets/image/search 1.png`
     }
 }
 

@@ -1,4 +1,4 @@
-var re_url="https://nazatech.me"
+var re_url="https://nazatech.me/aqure"
 
 const input=document.getElementsByClassName('span')[0]
 const copyNo=document.getElementsByClassName('copy')[0]
