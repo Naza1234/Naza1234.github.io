@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/ven.css">
+    <title>Home</title>
+</head>
+<body>
+
+    <section class="top_nav">
+        <img src="../assets/image/Aquer.png" alt="" class="logo">
+        <div class="search flex op0">
+            <img src="../assets/image/search 1.png" alt="">
+            <input type="text" placeholder="search here">
+        </div>
+        <div class="profile flex" onclick="seeProf()">
+            <img src="../assets/image/Rectangle 4.png" alt="">
+            <h1>name</h1>
+        </div>
+    </section>
+
+
+
+    <section class="right_nav flex">
+        <img src="../assets/image/Aquer.png" alt="" class="logo">
+        <ul class="flex column">
+            <a href="./home.html"><li class="li flex"><img src="../assets/image/home.png" alt="">Overview</li></a>
+            <a href="#"><li class="li flex active"><img src="../assets/image/add.png" alt="">Add Product</li></a>
+        </ul>
+        <button>
+            Log Out
+        </button>
+    </section>
+
+
+
+    <section class="dash">
+       <section class="prof_cont">
+        <section class="prof">
+            <div class="ed">
+                 <img src="../assets/image/drawing.png" alt="" onclick="edit()">
+                 <img src="../assets/image/cancel.png" alt="" onclick="seeProf()">
+            </div>
+            <div class="prof_head">
+                <img src="../assets/image/Rectangle 4.png" alt="">
+                <span>
+                    <h1>
+                        Emanuel princewill
+                    </h1>
+                    <h2>
+                        example@example.com
+                    </h2>
+                </span>
+            </div>
+            <div class="quick_vi">
+                <div>
+                    <img src="../assets/image/wallet (1).png" alt="">
+                    <span>
+                        <p>
+                            account balance
+                        </p>
+                        <h1>
+                            10,000
+                        </h1>
+            
+                    </span>
+                </div>
+
+                <div>
+                    <img src="../assets/image/shop.png" alt="">
+                    <span>
+                        <p>
+                            number in suck
+                        </p>
+                        <h1>
+                            100
+                        </h1>
+            
+                    </span>
+                </div>
+            </div>
+            <div class="dit">
+                <span>
+                    <p>
+                        name
+                    </p>
+                   <input type="text" value="emanuel prince">
+                </span>
+
+                <span>
+                    <p>
+                        email
+                    </p>
+                   <input type="text" value="example@example.gmail">
+                </span>
+
+                <span class="spa">
+                    <p>
+                        account Balance
+                    </p>
+                   <h1>10,000</h1>
+                   <button>
+                    TopUp
+                   </button>
+                </span>
+
+                <span>
+                    <p>
+                        phone number
+                    </p>
+                   <input type="text" value="+23471653687">
+                </span>
+
+                <span>
+                    <p>
+                        whatsapp link
+                    </p>
+                   <input type="text" value="https//:whatsapp/bwa">
+                </span>
+
+                <span>
+                    <p>
+                        password
+                    </p>
+                   <input type="password" value="gsafdjsgdjag">
+                </span>
+
+            </div>
+            <div class="upd">
+               
+            </div>
+        </section>
+       </section>
+        <section class="pop_up">
+            <div class="pop pb">
+                <h1>
+                    Double-checking:
+                </h1>
+                <p>
+                    Are you positive about adding this product to your shopping list?
+                </p>
+                <div class="flex">
+                    <button onclick="cl()">
+                        Cancel
+                    </button>
+    
+                    <button>
+                        Add 
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="scroll scroll-Y">
+            <section class="scroll-body-add">
+              <div class="flex column">
+                <select name="" id="">
+                    <option value="1">select category</option>
+                    <option value="2">food</option>
+                    <option value="3">fashion</option>
+                    <option value="4">electronics</option>
+                </select>
+                <label>
+                    <p>
+                        Name
+                    </p>
+                    <input type="text" placeholder="product name" class="input">
+                    <hr class="hr">
+                </label>
+                <label>
+                    <p>
+                        Price
+                    </p>
+                    <input type="number" placeholder="10000" class="input">
+                    <hr class="hr">
+                </label>
+                <p>
+                    A shot description to tel the specs of the products.
+                </p>
+                <textarea name="" placeholder="description"></textarea>
+                <span class="upload">
+                    <input type="file">
+                    <button>
+                        Upload Image
+                        <img src="../assets/image/image.png" alt="">
+                    </button>
+                </span>
+              </div>
+
+              <div class="flex column">
+                 <p>preview</p> 
+                 <span class="item-prive flex column">
+                    <img src="../assets/image/5bd94921-94a6-4949-80e6-a4689d9d7cf3 1.png" alt="">
+                    <h2>name</h2>
+                    <h3>price</h3>
+                    <img src="../assets/image/Rectangle 4.png" alt="">
+                  </span>
+                  <button onclick=" add()">
+                    Add
+                  </button>
+              </div>
+            </section>
+        </section>
+    </section>
+
+    
+    <script src="./js/gen.js"></script>
+    <script src="./js/add.js"></script>
+</body>
+</html>
