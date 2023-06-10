@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="shortcut icon" href="./assets/image/Raym Unlimited_iconcolored.png" type="image/x-icon">
     <title>Raym Unlimited</title>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("tfQzp4KbkhE0Cwr38");
+   })();
+</script>
 </head>
 <body>
     <section class="main">
@@ -15,14 +23,14 @@
              <img src="./assets/image/Raym Unlimited_logonameicononly white.png" alt="logo">
             </div>
             <ul class="nav">
-               <a href="#"><li>home</li></a>
-               <a href="#"><li>about</li></a>
+               <a href="#home"><li>home</li></a>
+               <a href="#about"><li>about</li></a>
                <a href="#"><li>services</li></a>
                <a href="#"><li>portfolio</li></a>
             </ul>
             <div class="ba">
                 <button>
-                    get in touch
+                    Get In Touch
                 </button>
                 <div class="buger">
                     <div class="line1"></div>
@@ -34,7 +42,7 @@
         </nav>
 
 
-        <header>
+        <header id="home">
             <img src="./assets/image/Raym Unlimited_iconcolored.png" alt="logo" class="img">
             <div>
                 <h2>
@@ -113,7 +121,7 @@
 
       <!-- about section  -->
        
-      <section class="about">
+      <section class="about" id="about">
         <div class="write">
             <h1>
                 About Us
@@ -214,24 +222,24 @@
             </div>
 
 
-            <div class="con-form">
+            <form class="con-form">
               <p>
                 Name
               </p>
-              <input type="text">
+              <input type="text" required>
               <p>
                 Email
               </p>
-              <input type="text">
+              <input type="text" required>
               <p>
-                Email
+                message
               </p>
-              <textarea  ></textarea>
+              <textarea required ></textarea>
               
               <button>
                 Submit
               </button>
-            </div>
+            </form>
            </div>
     </section>
 
@@ -266,5 +274,6 @@
 
 
     </section>
+    <script src="./assets/app.js"></script>
 </body>
 </html>

@@ -478,6 +478,7 @@ header button{
 .contact-dit{
     height: 830px;
     width: 100%;
+    gap:calc(20px + 3vw);
     padding: 100px;
     display: flex;
     justify-content: space-between;
@@ -581,9 +582,34 @@ header button{
     height: 81px;
     border: none;
     /* Primary */
-    
+    cursor: pointer;
     background: #003D56;
-    border-radius: 8px;    
+    border-radius: 8px;
+    position: relative;    
+}
+.submitted button::after{
+position: absolute;
+width: 30px;
+height: 30px;
+border: 3px solid transparent;
+border-right: 3px solid #003D56;
+content: "";
+right: 7%;
+border-radius: 1000px;
+animation: rot .5s forwards infinite;
+}
+@keyframes rot {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.submitted textarea,
+.submitted input{
+ opacity: .6;
+ pointer-events: none;
+}
+.submitted button{
+    background-color: grey;
 }
 
 
@@ -957,9 +983,11 @@ footer .sos .ul a{
     }
     .con-form input{
         width: 100%;
+        padding: 5px;
     }
     .con-form textarea{
         width: 100%;
+        padding: 5px;
     }
     .con-dis{
         width: 100%;
