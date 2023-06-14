@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>PDF Element Extraction</title>
+</head>
+<body>
+  <h1>PDF Element Extraction</h1>
+  <input type="file" id="pdfFile" accept=".pdf">
+  <input type="text" id="keywordInput" placeholder="Enter keyword">
+  <button id="searchButton">Search</button>
+  <div id="output"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script>
+    const pdfFileInput = document.getElementById('pdfFile');
+    const keywordInput = document.getElementById('keywordInput');
+    const searchButton = document.getElementById('searchButton');
+    const outputDiv = document.getElementById('output');
+
+    pdfFileInput.addEventListener('change', async function(event) {
+      const file = event.target.files[0];
+
+      try {
+        const typedArray = await file.arrayBuffer();
+        const pdfData = new Uint8Array(typedArray);
+
+        const loadingTask = pdfjsLib.getDocument(pdfData);
+        const pdf = await loadingTask.promise;
+
+        searchButton.addEventListener('click',async function() {
+          const keyword = keywordInput.value.trim();
+          let extractedText = '';
+
+          for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+            const page = await pdf.getPage(pageNum);
+            const textContent = await page.getTextContent();
+
+            textContent.items.forEach(item => {
+              // Check if the text item includes the keyword
+              if (item.str.toLowerCase().includes(keyword.toLowerCase())) {
+                extractedText += item.str + ' ';
+              }
+            });
+          }
+          outputDiv.textContent = extractedText;
+          console.log(extractedText);
+        });
+      } catch (error) {
+        console.error('Error extracting elements from PDF:', error);
+      }
+    });
+  </script>
+</body>
+</html>

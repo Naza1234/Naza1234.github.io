@@ -1,3 +1,5 @@
+var red_url="http://127.0.0.1:5500"
+var url="https://aquer-rest-framework.onrender.com/"
 
 const det=document.getElementsByClassName('bugger')
 const dilT=document.getElementsByClassName('dil')
@@ -38,3 +40,46 @@ function activeDel(e){
 function cl(){
     document.getElementsByClassName("pop_up")[0].classList.remove('poped')
 }
+function logOUT(){
+    var info={
+        username: "",
+        password: "",
+       }
+    fetch(url + "user/logout/",{
+        method:'POST',
+        body: JSON.stringify(info),
+        headers: {
+            'Content-type':'application/json'
+        }
+    })
+    .then((res)=>res.json())
+    .then((data)=>{
+    //     console.log(data);
+    //     localStorage.removeItem("aqweraVendor_id")
+    //   if (!localStorage.getItem("aqweraVendor_id")) {
+    //     window.location=`${red_url}/Login.html`
+    //   }
+    })
+
+}
+var userid=localStorage.getItem("aqwireUserKey")
+console.log(userid);
+// fetch(url + `user`, {
+//    method: 'GET',
+//   headers: {
+//     //   'Authorization': `Basic ${userid}`
+//     //  'Authorization': `Token YWRtaW46YWRtaW4=`
+//      'Authorization': `Token f0234556cdf9d91ae53450ea57a6b65ee3f0eb96`
+//     // 'Authorization': `Key ${userid}`
+//     //  'Authorization': `Bearer ${userid}`
+//   }
+//   })
+// .then((res)=>res.json())
+// .then((data)=>{
+//     console.log(data);
+//     console.log("data");
+// //     localStorage.removeItem("aqweraVendor_id")
+// //   if (!localStorage.getItem("aqweraVendor_id")) {
+// //     window.location=`${red_url}/Login.html`
+// //   }
+// })
