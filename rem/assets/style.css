@@ -16,13 +16,16 @@ body{
     justify-content: center;
     background-color: #0D0D0D;
     overflow-x: hidden;
+    transition: .5s ease-in-out;
 }
 .main{
     width: 1440px;
     position: relative;
 }
 
-
+.hide{
+    display: none;
+}
      /* nav styling */
 
 
@@ -515,8 +518,8 @@ header button{
     /* identical to box height */
     
     
-    color: #18191C;
-    background: #D9D9D9;
+    color: #FFFFFF;
+    background: #18191C;
 }
 
 
@@ -585,7 +588,6 @@ header button{
     cursor: pointer;
     background: #003D56;
     border-radius: 8px;
-    position: relative;    
 }
 .submitted button::after{
 position: absolute;
@@ -686,7 +688,6 @@ footer .sos .ul a{
         align-items: flex-end;
         padding: 0px;
         gap: 12px;
-        
         width: 35px;
         height: 24px;        
     }
@@ -704,19 +705,37 @@ footer .sos .ul a{
         border: 3px solid #FFFFFF;
         
     }
+    
     nav{
         position: relative;
     }
+    .hide{
+        display: flex;
+    }
     nav ul{
         width: 100vw;
-        height: 100vh;
+        height: 110vh;
+        max-height: 500px;
         position: absolute;
         top: 110%;
         right: 0px;
         flex-direction: column;
-        background-color: #003D56;
+        background-color: #0D0D0D;
+        align-items: center;
+        justify-content: space-between;
         padding: 20px;
+        transition: 1s ease-in-out;
         transform: translateX(100%);
+    }
+    nav ul li  {
+        font-family: 'DM Sans';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .body_nav_active nav ul{
+        transform: translateX(0%); 
     }
     .logo{
         width: 180.51px;
@@ -1006,6 +1025,7 @@ footer .sos .ul a{
         text-align: center;
     }
     .con-dis a{
+        background-color: #003D56;
         width: 524.44px;
         height: 100px;
     }
@@ -1054,8 +1074,11 @@ footer .sos .ul a{
     nav ul li {
         
     }
-    nav button{
+    .ba button{
          display: none;
+    }
+    .hide{
+        display: flex;
     }
     .buger{
          height: fit-content;
@@ -1443,3 +1466,85 @@ footer .sos .ul a{
         height: 60px;        
     }
 }
+
+
+.buger{
+    width: fit-content;
+}
+
+.buger-out .line2{
+  
+  animation: line2 1s forwards;
+}
+.buger-out .line1{
+  
+  animation: line1 1s forwards;
+}
+.buger-out .line3{
+  
+  animation: line3 1s forwards;
+}
+
+/* .buger-out .line1{
+    transition: .5s ease-in;
+    width: 30px;
+    border-radius:10000px;
+    transform: rotate(-45deg);
+    transform: rotate(-45deg)  translateX(-6px) translateY(5px);
+  } */
+
+@keyframes line1 {
+    20%{
+       
+        width: 0px;
+        border-radius:10000px;
+        transform: rotate(-45deg);
+    
+    }
+    100%{
+       
+        width: 30px;
+        border-radius:10000px;
+        transform: rotate(-45deg);
+        transform: rotate(-45deg)  translateX(-6px) translateY(5px);
+        
+    }
+}
+@keyframes line2 {
+    20%{
+        width: 100%;
+        align-self: flex-start;
+    }
+    100%{
+        align-self: flex-start;
+        width: 0px;
+        opacity: 0;
+        padding: 0;
+        height: 0px;
+        
+    }
+}
+@keyframes line3 {
+    20%{
+       
+        width: 0px;
+        border-radius:10000px;
+        transform: rotate(45deg);
+    
+    }
+    100%{
+       
+        width: 30px;
+    border-radius:10000px;
+    transform: rotate(45deg);
+    transform: rotate(45deg)  translateX(-6px) translateY(-5px);
+        
+    }
+}
+/* .buger-out .line3{
+    transition: .5s ease-in;
+    width: 30px;
+    border-radius:10000px;
+    transform: rotate(45deg);
+    transform: rotate(45deg)  translateX(-6px) translateY(-5px);
+  } */

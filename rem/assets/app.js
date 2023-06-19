@@ -30,3 +30,17 @@ form.addEventListener("submit",(e)=>{
          }
         )
 })
+const body=document.getElementsByTagName("body")[0]
+function seeNav(){
+  body.classList.toggle("body_nav_active")
+  document.getElementsByClassName("buger")[0].classList.toggle("buger-out")
+}
+var nav=document.getElementsByClassName("nav")[0]
+var navBtn=nav.getElementsByTagName("a")
+for (let i = 0; i < navBtn.length; i++) {
+  const element = navBtn[i];
+  element.addEventListener("click",()=>{
+    body.classList.toggle("body_nav_active")
+    document.getElementsByClassName("buger")[0].classList.toggle("buger-out")
+  })
+}
