@@ -550,14 +550,14 @@ header button{
     border: 2px solid rgba(41, 87, 106, 0.7);
     border-radius: 8px;
     outline: none;
-    padding-left: 5%;
+    padding: 5%;
     box-sizing: border-box;
 }
 
 .con-form textarea{
     box-sizing: border-box;
     outline: none;
-    padding-left: 5%;
+    padding: 5%;
     width: 597px;
     height: 174px;
     background: #EFE9E9;
